@@ -1,0 +1,80 @@
+
+body { 
+    font-family: Arial, sans-serif; 
+    font-size: 14px; 
+} 
+
+
+header { 
+    background-color: #333333; 
+    padding: 20px; 
+    text-align: center; 
+} 
+
+
+section { 
+    margin: 20px; 
+} 
+
+
+footer { 
+    background-color: #333333; 
+    padding: 10px; 
+    text-align: center; 
+} 
+
+
+h2 { 
+    color: black; 
+} 
+
+ 
+.highlight { 
+    background-color: orange; 
+    color: white; 
+    padding: 4px; 
+} 
+
+
+#header { 
+    border-bottom: 2px solid orange; 
+} 
+
+ 
+a[href^="mailto:"] { 
+    color: orange; 
+} 
+
+
+a:hover { 
+    color: white; 
+} 
+
+
+p::first-line { 
+    font-weight: bold; 
+} 
+
+
+header + main { 
+    border-top: 1px solid gray; 
+} 
+
+
+h1 { 
+    color: blue !important;  
+} 
+
+
+p { 
+    color: green; 
+} 
+
+ 
+p { 
+    color: red;  
+} 
+
+#header h1 { 
+    color: orange !important; 
+}
