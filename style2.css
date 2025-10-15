@@ -1,0 +1,123 @@
+/*
+ * --------------------------------
+ * Estilos Base e Desktop
+ * --------------------------------
+*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Importante para o posicionamento absoluto do menu no mobile */
+}
+
+.logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Links Desktop (Padrão) */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Links lado a lado no desktop */
+    transition: all 0.3s ease;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/*
+ * --------------------------------
+ * Estilos do Ícone Hambúrguer e do "Switch"
+ * --------------------------------
+*/
+
+/* Esconde a caixa de seleção completamente */
+.menu-toggle-input {
+    display: none;
+}
+
+/* Ícone Hambúrguer (O Label) */
+.menu-icon {
+    display: none; /* Escondido por padrão, só aparece no mobile */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+/*
+ * --------------------------------
+ * Responsividade (Mobile: telas com 768px ou menos)
+ * --------------------------------
+*/
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. MODO MOBILE PADRÃO: Mostrar o ícone e esconder os links */
+    
+    /* Mostrar as 3 Barrinhas */
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Esconder os links */
+    .nav-links {
+        display: none; /* Esconde a lista de links por padrão */
+        flex-direction: column; /* Empilha os links na vertical */
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Posiciona abaixo da navbar */
+        left: 0;
+        background-color: #333; 
+        text-align: center;
+        z-index: 10;
+    }
+    
+    .nav-links li {
+        border-top: 1px solid #444; /* Linha divisória */
+    }
+    
+    .nav-links li a {
+        padding: 15px; /* Mais espaço para toque */
+    }
+    
+    /* 2. A MÁGICA CSS-ONLY: Mostra o menu quando a caixa é marcada */
+    /* Quando o input (irmão do menu-icon) está :checked, ele afeta o nav-links */
+    .menu-toggle-input:checked ~ .nav-links {
+        display: flex; /* Revela o menu! */
+    }
+
+    /* Opcional: Efeito de X no ícone ao abrir (UX) */
+    .menu-toggle-input:checked ~ .menu-icon .bar:nth-child(2) {
+        opacity: 0; /* Barra do meio some */
+    }
+    .menu-toggle-input:checked ~ .menu-icon .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle-input:checked ~ .menu-icon .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}

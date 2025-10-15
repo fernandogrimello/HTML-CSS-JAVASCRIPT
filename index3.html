@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Fixa e Sutil</title>
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+    
+    <nav class="navbar">
+        <div class="logo">Seu Portfólio</div>
+        
+        <label for="menu-toggle" class="menu-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <header id="home" class="hero-section">
+        <h1>Design Focado no Conteúdo</h1>
+        <p>Esta Navbar é sutil, mas sempre visível.</p>
+    </header>
+
+    <section id="projetos" class="content-section light-bg">
+        <h2>Nossos Projetos (Seção 1)</h2>
+        <p>A Navbar permanece no topo enquanto você navega. Isso é obtido com a propriedade **`position: sticky`** ou **`position: fixed`** no CSS.</p>
+        <div style="height: 600px; padding-top: 20px;">Role para baixo!</div>
+    </section>
+
+    <section id="servicos" class="content-section dark-bg">
+        <h2>Serviços (Seção 2)</h2>
+        <p>Note como a cor do fundo da Navbar é semi-transparente, permitindo que o fundo do site apareça levemente.</p>
+        <div style="height: 600px; padding-top: 20px;">Mais conteúdo aqui.</div>
+    </section>
+
+    <footer id="contato" class="footer">
+        <p>&copy; 2024 Design Fixado. Fim da Página.</p>
+    </footer>
+    
+</body>
+</html>
