@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Global Adventures Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <p>Got a travel story to share? Questions about our adventures? Drop us a message!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="city1.html">Cities</a></li>
+            <li><a href="city2.html">Cities</a></li>
+            <li><a href="city3.html">Cities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <form action="/submit-form" method="post">
+        <label for="contact-name">Name:</label>
+        <input type="text" id="contact-name" name="name" required>
+
+        <label for="contact-email">Email:</label>
+        <input type="email" id="contact-email" name="email" required>
+
+        <label for="contact-subject">Subject:</label>
+        <input type="text" id="contact-subject" name="subject">
+
+        <label for="contact-message">Message:</label>
+        <textarea id="contact-message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms-of-use.html">Terms of Use</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <div class="contact-info">
+            <p>Contact us at: <a href="mailto:contact@globaladventuresblog.com">contact@globaladventuresblog.com</a></p>
+        </div>
+        <div class="copyright">
+            <p>© 2035 Global Adventures Blog. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
